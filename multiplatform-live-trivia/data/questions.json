@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answers": ["Paris"],
+    "answer_type": "EXACT"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answers": ["Mars"],
+    "answer_type": "EXACT"
+  },
+  {
+    "question": "What color is formed by mixing blue and yellow?",
+    "answers": ["Green"],
+    "answer_type": "EXACT"
+  }
+]

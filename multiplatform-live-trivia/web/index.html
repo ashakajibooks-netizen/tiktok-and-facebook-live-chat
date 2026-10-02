@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplatform LIVE Trivia</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header with Question Progress and State -->
+    <header class="header-bar">
+      <span id="question-count" class="question-counter">Q 0/0</span>
+      <span id="state-badge" class="state-badge">IDLE</span>
+    </header>
+
+    <!-- Question Box & 10s Monotonic Bar -->
+    <main class="question-card">
+      <div id="question-box" class="question-text">Loading question engine...</div>
+      <div id="answer-reveal" class="answer-reveal"></div>
+      
+      <div class="timer-wrapper">
+        <div class="timer-bar-container">
+          <div id="timer-bar" class="timer-bar-fill"></div>
+        </div>
+        <span id="timer-digits" class="timer-digits">10</span>
+      </div>
+    </main>
+
+    <!-- Host Admin Controls (Auto-hidden in /overlay mode) -->
+    <section id="host-controls" class="control-grid">
+      <button id="btn-start" class="btn btn-start" disabled>
+        ▶ START ROUND <span class="hotkey-hint">[SPACE]</span>
+      </button>
+      <button id="btn-stop" class="btn btn-stop">
+        ⏹ STOP
+      </button>
+    </section>
+
+    <!-- Leaderboard View -->
+    <section class="leaderboard-section">
+      <h3 id="leaderboard-title">Top 5 Players</h3>
+      <div id="leaderboard-list" class="leaderboard-list"></div>
+    </section>
+
+    <!-- System Telemetry (Auto-hidden in /overlay mode) -->
+    <footer id="system-telemetry" class="system-telemetry">
+      <div class="platform-badges">
+        <div id="tiktok-status" class="telemetry-tag">
+          <span class="status-dot"></span>
+          <span>TikTok: <strong class="status-text">OFFLINE</strong></span>
+        </div>
+        <div id="fb-status" class="telemetry-tag">
+          <span class="status-dot"></span>
+          <span>Facebook: <strong class="status-text">OFFLINE</strong></span>
+        </div>
+      </div>
+      <div id="queue-stats">Queue: 0/10000</div>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
